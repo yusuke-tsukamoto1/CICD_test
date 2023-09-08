@@ -1,0 +1,33 @@
+# サイトの基本情報
+title: Your Site's Title
+email: your-email@example.com
+description: >- # こちらはサイトの短い説明です。
+  This is a Jekyll website. You'll find this description in your `_config.yml`.
+baseurl: "" # この項目は必要な場合のみ使用します（例：サイトがサブディレクトリに配置されている場合）
+url: "http://yourdomain.com" # サイトのURL
+
+# ビルド設定
+markdown: kramdown
+theme: minima # テーマ（カスタムレイアウトを使用する場合でもこの設定はオプションです）
+
+# 除外リスト
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+  - LICENSE
+
+# プラグイン（gemでインストールしたもの）
+plugins:
+  - jekyll-feed
+
+# カスタムレイアウトで使用される追加のデータ
+custom:
+  navbar:
+    - name: Home
+      url: '/sample_pages'
+    - name: Blog
+      url: '/sample_pages/:year/:month/:day/:title/'
+# パーマリンク
+permalink: /:year/:month/:day/:title/
